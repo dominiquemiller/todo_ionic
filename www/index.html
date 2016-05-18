@@ -39,6 +39,7 @@
               <input type="checkbox" ng-model="todo.done" ng-checked={{todo.done}}>
             </label>
             {{ todo.title}} {{ todo.date}}
+            <button class="todo-button button" ng-click="deleteTodo(todos.indexOf(todo))">DEL</button>
           </li>
         </ul>
       </ion-content>

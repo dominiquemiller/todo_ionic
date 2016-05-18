@@ -38,6 +38,10 @@ angular.module('starter', ['ionic'])
     todos.splice(0, 0, todo);
   };
 
+  this.delete = function(index){
+    todos.splice(index, 1);
+  };
+
 })
 
 .controller('TodoController', ['$scope', 'ToDo', function($scope, ToDo){
@@ -57,6 +61,11 @@ angular.module('starter', ['ionic'])
       todo.date = todoDate();
       ToDo.add(angular.copy(todo));
       todo.title = '';
+    };
+
+    $scope.deleteTodo = function(index) {
+      console.log(index);
+      ToDo.delete(index);
     };
 
 }]);
