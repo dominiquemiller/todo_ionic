@@ -1,4 +1,5 @@
 /* Empty. Add your own CSS if you like */
 .todo-button {
   z-index: 99999;
+  float: right;
 }
